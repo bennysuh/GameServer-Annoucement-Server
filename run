@@ -1,0 +1,14 @@
+#!/usr/bin/php
+<?php
+include('framework/Autoloader.php');
+
+$autoloader = new Autoloader();
+// Use autoloader
+spl_autoload_register(array($autoloader, 'load'));
+
+
+$main = new Main();
+
+$main->start();
+
+$main->shutdown();
